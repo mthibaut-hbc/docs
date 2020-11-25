@@ -177,9 +177,7 @@ class Robots extends Model
             );
         }
 
-        if ($this->validationHasFailed() === true) {
-            return false;
-        }
+        return $this->validate($validator);
     }
 }
 ```
